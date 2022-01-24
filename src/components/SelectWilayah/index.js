@@ -10,7 +10,7 @@ export default function SelectWilayah({tingkat, kodeInduk, onChange, value}){
   React.useEffect(() => {
     setIsFetching(true);
     axios
-      .get(`http://regions-indoneisa.herokuapp.com/api/${tingkat}?kode_induk=${kodeInduk}`)
+      .get(`https://regions-indoneisa.herokuapp.com/api/${tingkat}?kode_induk=${kodeInduk}`)
       .then(({data}) => setData(data))
       .finally(_ => setIsFetching(false));
   }, [kodeInduk, tingkat]);
